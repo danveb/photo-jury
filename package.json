@@ -1,0 +1,14 @@
+{
+  "name": "photo-jury",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:danveb/photo-jury.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "sass-compile": "sass --watch --no-source-map main.scss style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
