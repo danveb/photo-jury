@@ -7,6 +7,7 @@ $color-davys-grey: #555a5b;
 $color-philippine-silver: #a9b4b7; 
 $color-charleston-green: #1f2f29; 
 $color-bright-gray: #e7edee; 
+$color-mountain-meadow: #2cc695; 
 // transition
 $ts: all 0.2s; 
 
@@ -37,6 +38,27 @@ ul {
 a {
   color: inherit; 
   text-decoration: none; 
+}
+
+// utility class: for specific elements to be styled a common way 
+.u-italic  {
+  font-style: italic; 
+}
+
+.u-accent {
+  color: $color-mountain-meadow; 
+}
+
+.u-underline {
+  text-decoration: underline; 
+}
+
+.u-bold {
+  font-weight: 500; 
+}
+
+.u-bolder {
+  font-weight: 700; 
 }
 
 // base
@@ -155,17 +177,183 @@ a {
   }
 }
 
+// -------------------------
+
 .sidebar {
   background-color: $color-charleston-green; 
   grid-column: 1 / 2; 
   grid-row: 2 / 4; 
 }
 
+.intro {
+  padding: 48px 35px 45px; 
+  border-bottom: 1px solid rgba(#fff, 0.1); 
+
+  &__text {
+    color: $color-anti-flash-white; 
+    font-size: 16px; 
+    margin-top: 12px; 
+    line-height: 1.8; 
+  }
+}
+
+.first-heading {
+  font-weight: 600; 
+  text-transform: uppercase; 
+  font-size: 34px; 
+  line-height: 1.2; 
+}
+
+.social {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 25px 0 30px; 
+
+  &__img {
+    height: 35px; 
+    width: 35px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 2px solid $color-white; 
+
+    &:not(:first-child) {
+      margin-left: -6px; 
+    }
+  }
+
+  &__container {
+    margin-left: 10px; 
+  }
+
+  &__number {
+    font-weight: 500; 
+  }
+
+  &__text {
+    font-size: 12px; 
+    color: $color-philippine-silver; 
+    margin-top: -5px; 
+  }
+}
+
+.auth {
+  &__text {
+    color: $color-philippine-silver; 
+    font-size: 12px; 
+    text-align: center; 
+    margin-top: 10px; 
+  }
+
+  &__link {
+    font-weight: 500; 
+    color: $color-mountain-meadow; 
+  }
+}
+
+.btn {
+  background-color: #16b47f; 
+  padding: 12px 0; 
+  display: block; 
+  text-align: center; 
+  border-radius: 500px; 
+  text-transform: uppercase; 
+  font-weight: 500; 
+  transition: $ts; 
+
+  &:hover,
+  &:focus {
+    background-color: #119267; 
+  }
+
+  &__icon {
+    margin-left: 10px; 
+  }
+}
+
+.upload {
+  padding: 45px 35px; 
+  border-bottom: 1px solid rgba(#fff, 0.1); 
+  color: $color-philippine-silver; 
+
+  &__container {
+    background-color: rgba(#fff, 0.03);
+    height: 330px; 
+    border-radius: 3px; 
+    cursor: pointer; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    transition: $ts; 
+    position: relative; 
+    overflow: hidden; 
+    
+    &:hover {
+      background-color: rgba(#fff, 0.06); 
+    }
+
+    // hacky way to create a dashed border around upload__container
+    &::before {
+      content: ""; 
+      border: 2px dashed #434747; 
+      position: absolute; 
+      top: -1px; 
+      bottom: -1px; 
+      left: -1px; 
+      right: -1px; 
+    }
+  }
+
+  &__icon {
+    font-size: 22px; 
+  }
+
+  &__text {
+    color: $color-white; 
+    margin-top: 8px; 
+  }
+
+  &__alternative {
+    font-size: 12px; 
+    margin-top: -2px; 
+  }
+}
+
+.footer {
+  padding-top: 50px; 
+  padding-left: 35px; 
+  font-size: 11px; 
+  color: rgba($color-philippine-silver, 0.6); 
+
+  &__list {
+    display: flex; 
+    column-gap: 15px; 
+    margin-top: 10px; 
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+  }
+}
+
+.copyright {
+  font-size: inherit; 
+}
+
+// -------------------------
+
 .gallery {
   background-color: $color-anti-flash-white;
   grid-column: 2 / 3; 
   grid-row: 2 / 3; 
 }
+
+// -------------------------
 
 .steps {
   background-color: $color-bright-gray;
