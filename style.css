@@ -71,7 +71,7 @@ a {
 }
 
 .app {
-  height: 1030px;
+  height: 1065px;
   width: 1240px;
   background-color: #fff;
   box-shadow: 0 25px 150px rgba(0, 0, 0, 0.65);
@@ -79,12 +79,51 @@ a {
   /* grid container */
   display: grid;
   grid-template-columns: 355px 1fr; /* 355px and rest as fr */
-  grid-template-rows: 55px 724px 1fr; /* 55px, 724px and rest as fr */
+  grid-template-rows: 35px 55px 724px 1fr; /* 35px 55px, 724px and rest as fr */
+}
+
+.toolbar {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.toolbar__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px;
+}
+.toolbar__nav .nav__1 {
+  background-color: rgb(255, 59, 48);
+  color: #555a5b;
+  font-size: 8px;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
+.toolbar__nav .nav__2 {
+  background-color: rgb(255, 204, 0);
+  color: #555a5b;
+  font-size: 8px;
+  border-radius: 50%;
+  height: 14px;
+  width: 14px;
+}
+.toolbar__nav .nav__3 {
+  background-color: rgb(52, 199, 89);
+  color: #555a5b;
+  border-radius: 50%;
+  font-size: 8px;
+  height: 14px;
+  width: 14px;
 }
 
 .header {
   grid-column: 1/3; /* with grid, span from col 1 to col 3 */
-  grid-row: 1/2; /* with grid, span from row 1 to row 2 */
+  grid-row: 2/3; /* with grid, span from row 2 to row 3 */
   display: flex;
   align-items: center;
 }
@@ -152,7 +191,7 @@ a {
 .sidebar {
   background-color: #1f2f29;
   grid-column: 1/2;
-  grid-row: 2/4;
+  grid-row: 3/5;
 }
 
 .intro {
@@ -272,7 +311,7 @@ a {
 }
 
 .footer {
-  padding-top: 50px;
+  padding-top: 35px;
   padding-left: 35px;
   font-size: 11px;
   color: rgba(169, 180, 183, 0.6);
@@ -289,7 +328,7 @@ a {
 .gallery {
   background-color: #eef3f4;
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 3/4;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 272px 60px 90px 64px 30px 208px;
@@ -380,7 +419,7 @@ a {
 .steps {
   background-color: #e7edee;
   grid-column: 2/3;
-  grid-row: 3/4;
+  grid-row: 4/5;
   display: flex;
   justify-content: center;
   align-items: center;
