@@ -474,4 +474,47 @@ a {
   background-color: $color-bright-gray;
   grid-column: 2 / 3; 
   grid-row: 3 / 4; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.step {
+  text-align: center; 
+  padding: 0 20px; 
+
+  &__icon {
+    font-size: 20px; 
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%; 
+    background-color: $color-white; 
+    margin-bottom: 17px; 
+    line-height: 50px; 
+
+    &--1 {
+      color: #4199b9; 
+    }
+  
+    &--2 {
+      color: #387cb0; 
+    }
+  
+    &--3 {
+      color: #1e51a9; 
+    }
+  }
+
+  &__text {
+    color: $color-philippine-silver; 
+    font-size: 12px; 
+    line-height: 1.8; 
+  }
+}
+
+.second-heading {
+  color: $color-davys-grey; 
+  font-size: 18px; 
+  font-weight: 500; 
+  margin-bottom: 6px; 
 }
